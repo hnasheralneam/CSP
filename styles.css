@@ -1,99 +1,122 @@
-body{
-    overflow-x: hidden;
-    overflow-y: hidden;
+* {
+   margin: 0;
+   padding: 0;
 }
-#alerts{
-    text-align: center;
-    font-size: 3vw;
+
+.title {
+   text-align: center;
+   margin: 1em 0;
+   font-size: 2.5rem;
+   font-family: sans-serif;
 }
-#rpsHeader{
-    text-align: center;
+
+#alerts {
+   padding-top: 2em;
+   text-align: center;
 }
-#userScore{
-    text-align: center;
-    background-color: aqua;
-    border: 2px solid black;
+
+.scores {
+   margin: auto;
+   display: grid;
+   grid-template-columns: auto auto;
+   text-align: center;
+   max-width: 800px;
+   background-color: #eee;
+   padding: 0.5em;
+   border-radius: 3rem;
 }
-#aiScore{
-    text-align: center;
-    background-color: aqua;
-    border: 2px solid black;
+
+#userScore,
+#aiScore {
+   padding: 0.3em 0;
+   background-color: #fff;
 }
-#rock{
-    margin-left: 7.5vw;
-    width: 20vw;
-    height: 20vw;
-    background-image: url("rock.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+
+#userScore {
+   border-radius: 3rem 0 0 3rem;
 }
-#paper{
-    width: 20vw;
-    height: 20vw;
-    margin-left: 3.5vw;
-    background-image: url("paper.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+
+#aiScore {
+   border-radius: 0 3rem 3rem 0;
 }
-#scissors{
-    width: 20vw;
-    height: 20vw;
-    background-image: url("scissors.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+
+.items-row {
+   display: grid;
+   grid-template-columns: auto auto auto;
+   text-align: center;
 }
-#row{
-    margin-top: 5vh;
+
+.item-button {
+   width: 20vw;
+   height: 20vw;
+   margin: auto;
+   background-repeat: no-repeat;
+   background-size: cover;
+   border-radius: 50%;
+   background-position: center;
+   border: none;
 }
-#rps{
-    width: 100vw;
-    height: 100vh;
-    background-color: rgb(1, 182, 179);
+
+#rock {
+   background-image: url("images/rock.jpg");
 }
-@media only screen and (max-width: 768px){
-    #rps{
-        display: inline-flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 20px;
-        padding-left: 0;
-        padding-right: 0;
-        margin-left: 0vw;
-        height: fit-content;
-    }
-    #rock{
-        margin: 0;
-        width: 50vw;
-        height: 50vw;
-    }
-    #paper{
-        margin: 0;
-        margin-top: 10px;
-        width: 50vw;
-        height: 50vw;
-    }
-    #scissors{
-        margin: 0;
-        margin-top: 10px;
-        width: 50vw;
-        height: 50vw;
-        margin-bottom: 10vw;
-    }
-    body{
-        overflow-y: visible;
-    }
-    #alerts2{
-        font-size: 10vw;
-    }
-    #replay{
-        font-size: 10vw;
-        border-radius: 20vw;
-    }
+
+#paper {
+   background-image: url("images/paper.jpg");
 }
-#replay{
-    background-color: red;
-    border-radius: 10vw;
-    font-size: 4vw;
-    padding: 0vw 1vw;
-    text-decoration: none;
+
+#scissors {
+   background-image: url("images/scissors.jpg");
+}
+
+#rps {
+   margin-top: 10vh;
+   padding: 5em 0;
+   width: 100vw;
+   background-color: rgb(1, 182, 179);
+}
+
+@media only screen and (max-width: 768px) {
+   #rps {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 0vw;
+      height: fit-content;
+   }
+
+   .scores {
+      margin: 1em;
+   }
+
+   .items-row {
+      grid-template-columns: auto;
+   }
+
+   .item-button {
+      width: 60vw;
+      height: 60vw;
+      margin: 1em;
+   }
+
+   #message {
+      font-size: 10vw;
+   }
+   #replay {
+      font-size: 10vw;
+      border-radius: 20vw;
+   }
+}
+
+#replay {
+   padding: 0.25em 0.5em;
+   background-color: #ff3721;
+   color: #fff;
+   font-weight: 700;
+   font-size: 1.25em;
+   font-family: sans-serif;
+   border-radius: 5em;
 }

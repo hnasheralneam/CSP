@@ -1,46 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="app.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1 id="rpsHeader">Welcome To Rock Paper Scissors Shoot!</h1>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6" id="userScore">
-                <h1>User Score</h1>
-                <h3 id="userScores">0</h3>
-            </div>
-            <div class="col-sm-6" id="aiScore">
-                <h1>Ai Score</h1>
-                <h3 id="aiScores">0</h3>
-            </div>
-            <div class="col-sm-12" id="alerts">
-                <h1 id="alerts2">Game Alerts</h1><a id="replay" href="javascript:window.location.reload(true)">Reload</a>
-            </div>
-        </div>
-    </div>
-    <div class="container" id="rps">
-        <div class="row" id="row">
-            <div class="col-sm-4">
-                <button id="rock" type="button" class="btn btn-primary"></button>
-            </div>
-            <div class="col-sm-4">
-                <button id="paper" type="button" class="btn btn-primary"></button>
-            </div>
-            <div class="col-sm-4">
-                <button id="scissors" type="button" class="btn btn-primary"></button>
-            </div>
-        </div>
-    </div>
-</body>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Rock Paper Scissors</title>
+      <link rel="stylesheet" href="styles.css" />
+   </head>
+   <body>
+      <h1 class="title">Welcome To Rock Paper Scissors!</h1>
+      <div class="scores">
+         <div id="userScore">
+            <h1>User Score</h1>
+            <h3 id="userScores">0</h3>
+         </div>
+         <div id="aiScore">
+            <h1>AI Score</h1>
+            <h3 id="aiScores">0</h3>
+         </div>
+      </div>
+      <div id="alerts">
+         <p id="message"></p>
+         <br />
+         <a id="replay" href="javascript:window.location.reload(true)">
+            Reload
+         </a>
+      </div>
+      <div id="rps">
+         <div class="row items-row">
+            <button id="rock" class="item-button"></button>
+            <button id="paper" class="item-button"></button>
+            <button id="scissors" class="item-button"></button>
+         </div>
+      </div>
+   </body>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <script src="app.js"></script>
 </html>
